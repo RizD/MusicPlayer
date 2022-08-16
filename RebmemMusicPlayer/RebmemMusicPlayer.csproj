@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+	<PackageIcon>musical-note.png</PackageIcon>
+	<ApplicationIcon>Images\application.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\pause.png" />
+    <None Remove="Images\play-pause.png" />
+    <None Remove="Images\play.png" />
+    <None Remove="Images\skip-next.png" />
+    <None Remove="Images\skip-previous.png" />
+    <None Remove="Images\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\application.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\musical-note.png" />
+    <Resource Include="Images\pause.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\play.png" />
+    <Resource Include="Images\skip-next.png" />
+    <Resource Include="Images\skip-previous.png" />
+    <Resource Include="Images\stop.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\musical-note.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
